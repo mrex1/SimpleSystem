@@ -2,8 +2,8 @@
 ### Description
 A simple job list app
 build with: 
-[*] backend - django
-[*] frontend - React
+* backend - django
+* frontend - React
 ### Installation
 1. Clone this project ```git clone https://github.com/mrex1/SimpleSystem```
 2. get into the diretory ```cd SimpleSystem```
