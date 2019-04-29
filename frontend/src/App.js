@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import * as Pages from './pages'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={PageName:"Account",key:""}
+		this.go = this.go.bind(this)
+		this.storeKey = this.storeKey.bind(this)
+		this.retrieveKey = this.retrieveKey.bind(this)
+	}
+	
+	go(PageName){
+		this.setState({PageName})
+	}
+	storeKey(key){
+		this.setState({key})
+	}
+	retrieveKey(){
+		return this.state.key
+	}
+  render(){
+	  let {PageName} = this.state
+	  let ActivePage = Pages[PageName]
+	  let globalprops = {go:this.go, storeKey:this.storeKey,retrieveKey:this.retrieveKey}
+	  return(
+	  <ActivePage
+	  {...globalprops}
+	  />);
+	}
 }
 
-export default App;
