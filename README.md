@@ -14,3 +14,4 @@ build with:
 ### Run
 1. start frontend server: ```cd frontend``` --> ```npm start```
 2. start backend server: ```cd backend``` --> ```python ./manage.py runserver```
+3. go to [localhost:3000]
