@@ -12,6 +12,5 @@ build with:
 5. go to the frontend dependencies:
 ```cd frontend``` --> ```npm install```
 ### Run
-1. start frontend server: ```cd frontend``` --> ```npm start```
-2. start backend server: ```cd backend``` --> ```python ./manage.py runserver```
-3. go to <http://localhost:3000>
+1. start backend server: ```cd backend``` --> ```python ./manage.py runserver```
+2. start frontend server: ```cd frontend``` --> ```npm start```
